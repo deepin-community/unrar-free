@@ -1,0 +1,15 @@
+Tests: 0001-smoketest
+Depends: @, sharutils, shunit2
+Restrictions: allow-stderr
+
+Tests: 0002-CVE-2017-14120
+Depends: @, sharutils, shunit2
+Restrictions: allow-stderr
+
+Tests: 0003-CVE-2017-14122
+Depends: @, sharutils, shunit2, valgrind
+Restrictions: allow-stderr
+
+Tests: 0004-CVE-2017-14121
+Depends: @, sharutils, shunit2, valgrind
+Restrictions: allow-stderr

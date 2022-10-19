@@ -1,0 +1,31 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: unrar-free
+Upstream-Contact: Ben Asselstine <benasselstine@canada.com>
+		  Jeroen Dekkers <jeroen@dekkers.cx>
+Source: http://download.gna.org/unrar/
+
+Files: *
+Copyright: 2004 Ben Asselstine <benasselstine@canada.com>
+	   2004 Jeroen Dekkers <jeroen@dekkers.cx>
+	   2000-2002 Christian Scheurer (www.ChristianScheurer.ch)
+	   2000-2002 Johannes Winkelmann (jw@tks6.net)
+	   1993-2002 Eugene Roshal
+License: GPL-2+
+
+Files: debian/*
+Copyright: 2004 Niklas Vainio <nvainio+deb@iki.fi>
+	   2006 Ying-Chun Liu (PaulLiu) <grandpaul@gmail.com>
+License: GPL-2+
+
+License: GPL-2+
+ RAR decompression code is copyright (c) by Eugene Roshal. UniquE RAR
+ File Library is copyright (c) 2000-2002 by Christian Scheurer and
+ Johannes Winkelmann. Unrar is copyright (c) 2004 by Ben Asselstine.
+ .
+ You are free to distribute this software under the terms of
+ the GNU General Public License as published by the Free Software
+ Foundation; either version 2 of the License, or (at your option)
+ any later version.
+ .
+ On Debian systems, the complete text of the GNU General Public License
+ version 2 can be found in /usr/share/common-licenses/GPL-2.

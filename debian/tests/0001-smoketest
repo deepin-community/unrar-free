@@ -1,0 +1,35 @@
+#!/bin/sh
+#
+# Simple smoketest of unrar extraction
+
+setUp() {
+	uudecode >archive.rar <<EOF
+begin-base64 644 -
+UmFyIRoHAM+QcwAADQAAAAAAAACRAHSAgCgAIgEAACACAAAD/TwH77wMJjEU
+MwgApIEAAGNsYW0uZXhlCcFZTMgAAAAc1+kYULWtszouCt0cW/3wCyWsye2n
+RguDS4S0kpcrL/Ckuag5oPiSg4XBFBJ4AvgNycVB2XFyiRkW0V72ztCr4Bcu
+B8d59wPudOc8U/fcy4cx+8BpcIwPB8QCODjnz9RDySYkGsD35zzsto5FTmxj
+5fRVUfTtJS0GOfB7dcwGtToG4wzG2O36fn4uYYffJwif60WIcezfkH69OKhK
+xdyP9cmyb8X+TxO96u7mG6pvU1BTpu3uCF8FGrN4dy1XXu3Q31cdGXoiTpES
+WsL0LTSYeRmueQDUdCO/CFqK1DM5+Ac3Hp/cmqSlHyFAmkXjJiUGuU5a4ONx
+6QRICbOWzHof7owJl9N++fCuQsvDR4qFpNPgqgaL58LetsA=
+====
+EOF
+}
+
+tearDown() {
+	rm -f archive.tar clam.exe
+}
+
+testList() {
+	unrar-free --list archive.rar
+	assertEquals "Status code" $? 0
+}
+
+testExtract() {
+	unrar-free --extract archive.rar
+	assertEquals "Status code" $? 0
+	assertTrue "File exists" "[ -e clam.exe ]"
+}
+
+. /usr/bin/shunit2

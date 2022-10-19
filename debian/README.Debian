@@ -1,0 +1,15 @@
+unrar for Debian
+----------------
+
+This is a free unrar utility meant to replace the non-free unrar
+currently in Debian (available under the name 'unrar').
+
+Note that the binary is called 'unrar-free'
+
+It's not completely there yet, especially advanced features of 3.x archive
+support is still missing.
+Help with development is appreciated, see http://home.gna.org/unrar/
+
+3.x archive can be support if unar is installed.
+
+ -- Ying-Chun Liu (PaulLiu) <paulliu@debian.org>, Tue,  8 Jul 2014 04:30:13 +0800

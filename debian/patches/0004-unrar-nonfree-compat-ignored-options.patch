@@ -1,0 +1,18 @@
+Description: Add -y for compatibility
+ This patch allows -y option for compatibility. Through -y is currently
+ useless.
+Author: Dominik George <nik@naturalnet.de>
+Bug-Debian: https://bugs.debian.org/724295
+Last-Update: 2017-10-14
+Index: unrar-free-0.0.1+cvs20140707/src/opts.c
+===================================================================
+--- unrar-free-0.0.1+cvs20140707.orig/src/opts.c
++++ unrar-free-0.0.1+cvs20140707/src/opts.c
+@@ -218,6 +218,7 @@ int compat_iscmd(char *a) {
+    || strcmp(a,"vt")==0
+    || strcmp(a,"vb")==0
+    || strcmp(a,"x")==0
++   || strcmp(a,"y")==0
+   ) {
+     return (1==1);
+   }

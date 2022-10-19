@@ -1,0 +1,176 @@
+unrar-free (1:0.0.1+cvs20140707-4) UNRELEASED; urgency=medium
+
+  * update
+
+ -- Ying-Chun Liu (PaulLiu) <paulliu@debian.org>  Thu, 19 May 2022 11:37:53 +0800
+
+unrar-free (1:0.0.1+cvs20140707-4) unstable; urgency=low
+
+  * Fix CVE-2017-14122 (Closes: #874060)
+    - debian/patches/0002-CVE-2017-14122.patch
+  * Add autopkgtest for testing CVE-2017-14122
+  * Fix CVE-2017-14121 (Closes: #874061)
+    - debian/patches/0003-CVE-2017-14121.patch
+  * Add autopkgtest for testing CVE-2017-14121
+  * Fix compatibility for -y option (Closes: #724295)
+    - debian/patches/0004-unrar-nonfree-compat-ignored-options.patch
+    - Thanks to Dominik George <nik@naturalnet.de>
+  * Bump Standards-Version to 4.1.1: Nothing needs to be changed
+
+ -- Ying-Chun Liu (PaulLiu) <paulliu@debian.org>  Mon, 16 Oct 2017 00:46:04 +0800
+
+unrar-free (1:0.0.1+cvs20140707-3) unstable; urgency=low
+
+  * autopkgtest: Add depends to shunit2
+    - Thanks to Chris Lamb <lamby@debian.org>
+
+ -- Ying-Chun Liu (PaulLiu) <paulliu@debian.org>  Fri, 08 Sep 2017 03:34:05 +0800
+
+unrar-free (1:0.0.1+cvs20140707-2) unstable; urgency=low
+
+  [ Chris Lamb <lamby@debian.org> ]
+  * Fix CVE-2017-14120 (Closes: #874059)
+  * Add autopkgtest for testing CVE-2017-14120
+
+  [ Ying-Chun Liu (PaulLiu) <paulliu@debian.org> ]
+  * Bump Standards-Version to 4.0.0: Nothing needs to be changed
+  * debian/control: Add pike8.0 to Suggests
+
+ -- Ying-Chun Liu (PaulLiu) <paulliu@debian.org>  Thu, 07 Sep 2017 13:14:41 +0800
+
+unrar-free (1:0.0.1+cvs20140707-1) unstable; urgency=low
+
+  * New upstream release
+    - Use unar to handle RAR3 format when it is installed (Closes: #731415)
+  * Bump Standards-Version to 3.9.5: Nothing needs to be changed
+
+ -- Ying-Chun Liu (PaulLiu) <paulliu@debian.org>  Tue, 08 Jul 2014 04:29:29 +0800
+
+unrar-free (1:0.0.1+cvs20071127-2) unstable; urgency=low
+
+  * Bump Standards-Version to 3.9.3
+    - Use machine-readable debian/copyright
+  * Bump debhelper to 9
+    - Use debhelper7 debian/rules file (Closes: #673481)
+  * Use DebSrc3.0 format
+
+ -- Ying-Chun Liu (PaulLiu) <paulliu@debian.org>  Sat, 19 May 2012 22:24:23 +0800
+
+unrar-free (1:0.0.1+cvs20071127-1) unstable; urgency=low
+
+  * New upstream release
+    + fix bugs: read over header size
+    + fix bugs: integer overflow
+    + remove RARv3 code from libclamav due to unclear license and patent issues
+  * Fix lintian warning: debian-rules-ignores-make-clean-error
+  * Use update-alternatives for /usr/bin/unrar (Closes: #431453)
+    + Add conflicts to unrar-nonfree (<< 1:3.7.8-1) for /usr/bin/unrar
+  * Add suggestions to pike for some extra developing tools
+  * Bump Standards-Version to 3.7.3
+  * Use Homepage field in debian/control instead of the old Homepage paragraph
+
+ -- Ying-Chun Liu (PaulLiu) <grandpaul@gmail.com>  Sun, 16 Dec 2007 00:12:11 +0800
+
+unrar-free (1:0.0.1+cvs20070515-1) unstable; urgency=low
+
+  * New CVS verson
+    + fix bugs: create directory path when it is not exist
+  * Bump debhelper compatibility to 5
+
+ -- Ying-Chun Liu (PaulLiu) <grandpaul@gmail.com>  Tue, 15 May 2007 22:58:30 +0800
+
+unrar-free (1:0.0.1+cvs20070424-1) unstable; urgency=low
+
+  * New CVS verson
+    + merge the changes from unrarlib sourceforge svn, which comes from
+      clamav team.
+  * Remove some trailing spaces and unused empty lines
+  * Add depends on {misc:Depends}
+
+ -- Ying-Chun Liu (PaulLiu) <grandpaul@gmail.com>  Fri, 25 Apr 2007 19:22:12 +0800
+
+unrar-free (1:0.0.1+cvs20060609-1) unstable; urgency=low
+
+  * New CVS version
+    + Fix warnings: dereferencing type-punned pointer
+  * Update policy version from 3.6.2 to 3.7.2
+
+ -- Ying-Chun Liu (PaulLiu) <grandpaul@gmail.com>  Fri,  9 Jun 2006 01:06:24 +0800
+
+unrar-free (1:0.0.1+cvs20060430-2) unstable; urgency=low
+
+  * Reformatting changelog entries
+
+ -- Ying-Chun Liu (PaulLiu) <grandpaul@gmail.com>  Mon,  1 May 2006 11:35:43 +0800
+
+unrar-free (1:0.0.1+cvs20060430-1) unstable; urgency=low
+
+  * New CVS version
+    + Make parent of directories if it doesn't exist
+    + Fix the type of the return value of CalcCRC32 function (Closes: #261261)
+
+ -- Ying-Chun Liu (PaulLiu) <grandpaul@gmail.com>  Sun, 30 Apr 2006 21:33:00 +0800
+
+unrar-free (1:0.0.1+cvs20060412-2) unstable; urgency=low
+
+  * Modify changelog to seperate upstream changes from packaging changes
+  * Fix debian/watch file
+
+ -- Ying-Chun Liu (PaulLiu) <grandpaul@gmail.com>  Wed, 14 Apr 2006 00:19:00 +0800
+
+unrar-free (1:0.0.1+cvs20060412-1) unstable; urgency=low
+
+  * New CVS version
+    + Bug fixed in command line compatibility
+  * Remove unnecessary doc files
+  * Add explicitly "GPLv2 or later" clauses in copyright file
+  * Add synopsis of command line compatibility of non-free unrar into manpage
+  * Adjust debian/rules to reduce the size of .diff.gz by using the
+    up-to-date config.*
+  * Remove comments from debian/watch
+
+ -- Ying-Chun Liu (PaulLiu) <grandpaul@gmail.com>  Wed, 12 Apr 2006 16:19:00 +0800
+
+unrar-free (1:0.0.1+cvs20060305-1) unstable; urgency=low
+
+  * New CVS version
+    + Remove filename length 260 bytes restriction
+    + Remove archive name length 255 bytes restriction
+    + Remove password length 255 bytes restriction
+    + Remove compile warning "operation on `I' may be undefined" (bug #261261)
+  * Add README files to docs
+
+ -- Ying-Chun Liu (PaulLiu) <grandpaul@gmail.com>  Sun, 5 Mar 2006 21:28:00 +0800
+
+unrar-free (1:0.0.1+cvs20060228-1) unstable; urgency=low
+
+  * New Maintainer (Closes: #302896)
+  * New CVS version
+    + Command line compatibility with non-free unrar added (Closes: #271015)
+
+ -- Ying-Chun Liu (PaulLiu) <grandpaul@gmail.com>  Tue, 28 Feb 2006 00:57:22 +0800
+
+unrar-free (1:0.0.1-2) unstable; urgency=low
+
+  * QA Upload orphaning package
+  * Rename source & binary to unrar-free, because this package isn't yet near
+    to functional equivalence of 'unrar', also rename binary to 'unrar-free',
+    because policy says no two files in the archive may have the same name
+    while not being drop in replacements (c.f. #270751, closes: #265045)
+  * Be realistic in the README.Debian, encourage people to participate in
+    upstream development
+  * Fix incorrect display of "failed" in some cases, thanks to Niklas Vainio
+    for the patch (Closes: #292945)
+  * Security fix: Disable debugging (unconditional write to
+    /tmp/debug_unrar.txt) (Closes: #309045)
+  * Exit with non-zero exit code when something went wrong, again thanks for
+    Niklas Vainio for his work (Closes: #288398)
+
+ -- Jeroen van Wolffelaar <jeroen@wolffelaar.nl>  Sun, 22 May 2005 19:22:21 +0200
+
+unrar (1:0.0.1-1) unstable; urgency=low
+
+  * Initial Release (closes: #229256)
+
+ -- Niklas Vainio <nvainio+deb@iki.fi>  Sat, 19 Jun 2004 16:33:20 +0300
+
